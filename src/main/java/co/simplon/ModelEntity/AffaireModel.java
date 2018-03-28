@@ -23,11 +23,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
+// Déclaration de la classe Affaire avec annotation @Entity et @table pour que JPA puisse scanner et reconnaitre
+// cette classe en tant que nouvelle table dans la database -- Implements SERIALIZABLE
 @Entity
 @Table(name = "affaire")
 //@EntityListeners(AuditingEntityListener.class)
 public class AffaireModel implements Serializable{
 
+	// ======= Attributs simples ================================
+	// Clé primaire autoIncrement
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Long id;
@@ -42,6 +46,7 @@ public class AffaireModel implements Serializable{
 	@Column (length=40)
 	private String rapport;
 
+	// ======= Attributs @oneToMany signifiant qu'une Affaire  peut contenir plusieurs véhicules, armes etc ========
 
 	@OneToMany(mappedBy="affaire")
 	private Set<VehiculeModel> listVehicule= new HashSet<> ();
