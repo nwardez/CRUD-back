@@ -1,4 +1,8 @@
 # CRUD-back
+<<<<<<< HEAD
+=======
+# CRUD-back
+>>>>>>> 1750604a68ce872f89a2cce59f76b8518d522d8e
 ## Contexte
 Réalisation d'un projet CRUD fonctionnel à partir du projet fil-rouge
 Ce projet doit inclure la partie back, et la partie front du projet. Il s'agit ici de la partie back
@@ -12,11 +16,18 @@ Réalisation de 3 classes s'appuyant sur le modèle MVC
 AffaireModèle : Classe @Entity décrivant l'objet Affaire
 IRepositoryAffaire : Interface s'occupant de la couche DAO
 AffaireController : Classe s'occupant de l'Api
+<<<<<<< HEAD
+=======
+## Création d'un Test Unitaire
+Voir classe AffaireRepositoryTest.java
+Cette classe teste la requête retournant la liste des affaires
+>>>>>>> 1750604a68ce872f89a2cce59f76b8518d522d8e
 ## Requêtes SQL
 JPARepositpory possédant ses propres méthodes de requêtes SQL, ces différentes requêtes ont été rajoutées en commentaire dans la classe AffaireController
 
 ## Installation du projet coté back
 ### Création d'une base de donnée vide
+<<<<<<< HEAD
 Via les lignes de commande SQL:
 ```
 CREATE DATABASE gedesaft_v2
@@ -24,6 +35,16 @@ CREATE DATABASE gedesaft_v2
 ### Récupération du projet
 Le projet se trouve dans mon GITHUB à l'adresse suivante:
 [Lien GITHUB](https://github.com/nwardez/CRUD-front.git)
+=======
+Via les lignes de commande SQL: (voir fichier SQL databaseCreate dans SRC/MAIN/RESOURCES
+```
+CREATE DATABASE gedesaft_v2
+```
+Puis pour y inserer des données (fichier SQL databaseTable dans SRC/MAIN/RESOURCES) .. Cette étape est facultative car la table sera créée automatiquement par JPA
+### Récupération du projet
+Le projet se trouve dans mon GITHUB à l'adresse suivante:
+[Lien GITHUB](https://github.com/nwardez/CRUD-back.git)
+>>>>>>> 1750604a68ce872f89a2cce59f76b8518d522d8e
 ### Ouvrir ce projet avec ton IDE préféré
 Une fois ouvert, ouvrir le fichier application.properties situé dans SRC/MAIN/RESOURCES
 sur la ligne suivante: 
@@ -35,4 +56,9 @@ Remplacer "admin" par ton mot de passe
 Cliquer droit sur le fichier Application.java situé dans le package co.simplon. et "run as Java Application"
 SpringBoot se lance en se connectant au serveur via le port:8080,
 ### Tester l'application
+<<<<<<< HEAD
 Via postman, on peut tester les differentes méthodes du controleur Affaire
+=======
+Via postman, on peut tester les differentes méthodes du controleur Affaire;
+Ou via Le projet ANGULAR voir CRUD-Front sur mes Repo
+>>>>>>> 1750604a68ce872f89a2cce59f76b8518d522d8e
