@@ -75,7 +75,7 @@ En lançant l'application (run as Application java), la connexion au port:8080 s'
 il vous est donc possible de tester ce programme via POSTMAN.
 
 ##TEST UNITAIRE
-Un test fonctionnel a été créé à cette adresse: [lien test](https://github.com/nwardez/CRUD-BACK/blob/master/src/test/java/com/exampleDemo/AffaireRepositoryTest.java)
+Un test fonctionnel a été créé à cette adresse: [lien test](https://github.com/nwardez/CRUD-back/blob/master/src/test/java/com/example/demo/AffaireRepositoryTest.java)
  
  ##MOCKUP
  
