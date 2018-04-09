@@ -37,7 +37,7 @@ Via GitHub :
 
 ### DIAGRAMMES D’ACTIVITE
 
-![](docs/DiagrammeActivites.PNG)
+![](docs/diagrammeActivites.PNG)
 
 ## Technologies Back
 Sous éclipse: 
