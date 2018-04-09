@@ -28,7 +28,7 @@ Via GitHub :
 
 ### USECASE
 
-![](docs/UseCases.PNG)
+![](docs/useCases.PNG)
 
 ### DIAGRAMME DE CLASSE
 
@@ -37,7 +37,7 @@ Via GitHub :
 
 ### DIAGRAMMES D’ACTIVITE
 
-![](documents/DiagrammeActivites.PNG)
+![](docs/DiagrammeActivites.PNG)
 
 ## Technologies Back
 Sous éclipse: 
