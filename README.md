@@ -1,146 +1,84 @@
-ï»¿  # Evaluation CRUD
-## MODE OPÃ‰RATOIRE
+ # Evaluation CRUD
+## MODE OPÉRATOIRE
 
-### PrÃ©requis (Back)
+### Prérequis (Back)
 - Java 1,8
-- Maven (+ commandes exÃ©cuter/dÃ©ployer)
+- DatabaseCREATE.sql (création de la base)
+- DatabaseTable.sql (création des tables et ajouts données) [lien fichier DatabaseTable](https://github.com/nwardez/CRUD-BACK/blob/master/src/main/resources/databaseTable.sql)
+- Ces fichiers se trouvent dans src/main/resources
 
-- SGBDR MySQL
-- schema.sql (crÃ©ation de la base et des tables)
-- data.sql (obtention des donnÃ©es)
-
-#### Modifications nÃ©cessaires [Lien fichier properties](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/resources/application.properties)
-- spring.datasource.url=jdbc:mysql :
-- spring.datasource.username
-- spring.datasource.password
+#### Modifications nécessaires [Lien fichier properties](https://github.com/nwardez/CRUD-BACK/blob/master/src/main/resources/application.properties)
+- spring.datasource.username= Votre username SQL
+- spring.datasource.password= Password SQL
 
 - Si besoin de changer le port du serveur Tomcat,  ajouter la ligne : 
 server.port: XXXX
-
-### PrÃ©requis (Front)
-- NodeJS
 
 ### Lancement
 
 #### Back
 Via GitHub :
 1. Cloner le repo
-2. Ajouter le projet Ã  votre IDE prÃ©fÃ©rÃ©e
+2. Ajouter le projet à votre IDE préférée
 3. Faire un ```MVN Clean Install```
 4. Faire un Maven Update Project
-5. Lancer lâ€™application via : Run as Spring Boot App
-
-## Projet
-Projet fil rouge : Faire une application pour les experts de Miami en Ã©quipe.
-DÃ©montrer l'utilisation du CRUD.
+5. Lancer l’application via : Run as Spring Boot App
 
 ## DIAGRAMMES
 
 ### USECASE
 
-![](documents/UseCase.PNG)
+![](docs/UseCase.PNG)
 
 ### DIAGRAMME DE CLASSE
 
-![](documents/DiagrammeClasses.PNG)
+![](docs/DiagrammeClasses.PNG)
 
 
-### DIAGRAMMES Dâ€™ACTIVITE
+### DIAGRAMMES D’ACTIVITE
 
-- CONNEXION
-
-![](documents/DAauthentification.PNG)
-
-- GESTION DES ACCES
-
-![](documents/DAgestionAcces.PNG)
-
-- CREATION ARMES
-
-![](documents/DAcretionArme.PNG)
-
-- CREATION ARMES
-
-![](documents/DAcretionArme.PNG)
-
-- RECHERCHE ARME
-
-![](documents/DArechercheArme.PNG)
-
-
+![](documents/DiagrammeActivite.PNG)
 
 ## Technologies Back
-Sous Ã©clipse: 
-  -programme en JAVA Spring Boot et ustilisation de l'ORM Hibernate pour crÃ©er les tables et ses relations 
-   dans la base de donnÃ©es.
+Sous éclipse: 
+  -programme en JAVA Spring Boot et ustilisation de JPA Hibernate pour créer les tables et ses relations 
+   dans la base de données.
   
-## Evaluation des compÃ©tences
+## Evaluation des compétences
 ### Structure du projet
 
-RÃ©alisation du programme: 
-  - Toutes les classes (model) de A Ã  Z  ainsi que leur controller en passant par l'interface JPArepository
-    organisÃ© par [packages](https://github.com/milk42/Back-CRUD-evaluation/tree/master/src/main/java/co/simplon).
-    
-  - Vous trouverez des commentaires sur le suivi de la classe Suspect avec l'utilisation de JPA Hibernate.
-      . [SuspectModel](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/ModelEntity/SuspectModel.java) 
-      . [iRepositorySuspect](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Repository/IRepositorySuspect.java)
-      . [SuspectController](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Controller/SuspectController.java)
+Réalisation du programme: 
+  - Toutes les classes (model) de A à Z  ainsi que leur controller en passant par l'interface JPArepository
+    organisé par [packages](https://github.com/nwardez/CRUD-back/tree/master/src/main/java/co/simplon).
       
-Pour exemple, voici la rÃ©alistaion du model Temoin sans Hibernate donc avec la DAO:
-        .Le CRUD n'y est pas totalement prÃ©sent (manque de temps)
-        - [TemoinJDBC](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/ModelEntity/TemoinJdbc.java)
-        - [TemoinDAO](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Repository/TemoinDAO.java)
-        - [JdbcTemoinDAO](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Repository/jdbcTemoinDAO.java)
-        - [TemoinService](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Service/TemoinService.java)
-        - [TemoinControllerJdbc](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/java/co/simplon/Controller/TemoinControllerJdbc.java)
 
 ## INSTALLATION
-### CrÃ©ation d'une base de donnÃ©es vide
-Via les lignes de commande SQL:
-```
-CREATE DATABASE gedesaft_jpa_jdbc;
-```
-Pour tester la JDBC depuis la classe Temoin avec Postman
-OU
-Via les lignes de commande SQL toujours en changeant le fichier properties:
+### Création d'une base de données vide
+Via la lignes de commande SQL:
 ```
 CREATE DATABASE gedesaft_v2;
 ```
-Le script de la base de donnÃ©es se trouve dans les fichiers :
-[data.sql](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/resources/Script/database.sql)
-[script.sql](https://github.com/milk42/Back-CRUD-evaluation/blob/master/src/main/resources/Script/script.sql)
 
 ### SCHEMA SQL
 
-![](documents/SchÃ©ma.PNG)
+![](documents/Schéma.PNG)
 
-### RÃ©cupÃ©ration du projet
-Le projet se trouve dans mon GITHUB Ã  l'adresse suivante:
-[Lien GITHUB milk42](https://github.com/milk42/Back-CRUD-evaluation)
+### Récupération du projet
 
-### Ouvrir le projet dans Ã©clipse
+### Ouvrir le projet dans éclipse
 Changer le mot de passe existant avec le votre dans l'application properties
 sur la ligne suivante: 
 ```
 spring.datasource.password=
 ```
-En lanÃ§ant l'application (run as Application java), la connexion au port:8080 s'initialise,
-il vous est donc possible de tester ce programme en crÃ©ant (test du CRUD) des suspects par exemple, directement
-depuis les lignes de commande SQL ou via POSTMAN.
+En lançant l'application (run as Application java), la connexion au port:8080 s'initialise,
+il vous est donc possible de tester ce programme via POSTMAN.
 
-### TO BE CONTINUED
-
-## Voici la partie FRONT
-
-Pour utiliser ce programme vous avez le choix entre deux interfaces mettant en avant le CRUD sur le modele SUSPECT:
-
-   - FRONT SIMPLE [ICI](https://github.com/milk42/Front-CRUD-evaluation)
-   - FRONT EQUIPE plus ergonomique avec une expÃ©rience utilisateur pensÃ©e et plus RESPONSIVE [ICI](https://github.com/milk42/Front-Equipe-CRUD) => adaptÃ©e avec le programme d'Ã©quipe [ICI](https://github.com/milk42/Back-Equipe-CRUD)
+##TEST UNITAIRE
+Un test fonctionnel a été créé à cette adresse: [lien test](https://github.com/nwardez/CRUD-BACK/blob/master/src/test/java/com/exampleDemo/AffaireRepositoryTest.java)
  
  ##MOCKUP
  
-Cette application Ã  Ã©tÃ© basÃ©e sur ce Mockup :
+Une partie du Mockup réalisé avec Balsamicq :
         
-  ![](documents/Login.PNG)
-  ![](documents/Accueil.PNG)
-  ![](documents/Mockup.PNG)
+  ![](docs/mockup.PNG)
